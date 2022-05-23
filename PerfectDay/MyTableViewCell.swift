@@ -9,7 +9,9 @@ import UIKit
 
 class MyTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var PlanTime: UILabel!
     @IBOutlet weak var PlanName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
