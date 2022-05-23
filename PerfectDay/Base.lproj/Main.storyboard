@@ -11,14 +11,92 @@
         <!--오늘의 계획-->
         <scene sceneID="vDh-eg-DbK">
             <objects>
-                <viewController id="HtT-YB-fMy" sceneMemberID="viewController">
+                <viewController id="HtT-YB-fMy" customClass="TodayPlanViewController" customModule="PerfectDay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tbN-Hm-goP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L0y-Yg-Evs">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="140" id="Jxw-uB-PSo" customClass="myTableViewCell" customModule="PerfectDay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jxw-uB-PSo" id="Lbv-Oj-VuW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5b-gr-aXZ">
+                                                    <rect key="frame" x="15" y="5" width="394" height="130"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="IVh-Yt-OW6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijp-ac-mX1">
+                                                    <rect key="frame" x="20" y="75" width="389" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="p5b-gr-aXZ" firstAttribute="leading" secondItem="Lbv-Oj-VuW" secondAttribute="leading" constant="15" id="2E0-SD-7uj"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ijp-ac-mX1" secondAttribute="bottom" constant="15" id="5Fc-AO-U7w"/>
+                                                <constraint firstAttribute="trailing" secondItem="p5b-gr-aXZ" secondAttribute="trailing" constant="5" id="LEF-Zf-xi3"/>
+                                                <constraint firstItem="Ijp-ac-mX1" firstAttribute="leading" secondItem="Lbv-Oj-VuW" secondAttribute="leading" constant="20" id="X9X-OE-mVA"/>
+                                                <constraint firstItem="Ijp-ac-mX1" firstAttribute="top" secondItem="Lbv-Oj-VuW" secondAttribute="top" constant="75" id="bhy-5T-qWZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="p5b-gr-aXZ" secondAttribute="bottom" constant="5" id="dzF-h5-ET9"/>
+                                                <constraint firstItem="p5b-gr-aXZ" firstAttribute="top" secondItem="Lbv-Oj-VuW" secondAttribute="top" constant="5" id="rbX-Xz-2oX"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ijp-ac-mX1" secondAttribute="trailing" constant="5" id="w9Y-hd-2tV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.95000961260000005" green="1" blue="0.99057686820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="PlanName" destination="p5b-gr-aXZ" id="wgR-DJ-DdO"/>
+                                            <outlet property="PlanTime" destination="Ijp-ac-mX1" id="Wmx-At-uEU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okS-We-sNT">
+                                <rect key="frame" x="15" y="114" width="384" height="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfect Man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Uy-pB-uUr">
+                                <rect key="frame" x="15" y="54" width="384" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7iv-Ja-lHU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="L0y-Yg-Evs" firstAttribute="top" secondItem="0Uy-pB-uUr" secondAttribute="bottom" constant="40" id="7iD-Dh-Sxm"/>
+                            <constraint firstItem="7iv-Ja-lHU" firstAttribute="trailing" secondItem="L0y-Yg-Evs" secondAttribute="trailing" id="Blg-d4-tbH"/>
+                            <constraint firstItem="0Uy-pB-uUr" firstAttribute="top" secondItem="7iv-Ja-lHU" secondAttribute="top" constant="10" id="CCi-8f-9B3"/>
+                            <constraint firstItem="okS-We-sNT" firstAttribute="leading" secondItem="7iv-Ja-lHU" secondAttribute="leading" constant="15" id="CbN-OV-cYA"/>
+                            <constraint firstItem="7iv-Ja-lHU" firstAttribute="trailing" secondItem="0Uy-pB-uUr" secondAttribute="trailing" constant="15" id="HjL-hL-FhS"/>
+                            <constraint firstItem="L0y-Yg-Evs" firstAttribute="top" secondItem="okS-We-sNT" secondAttribute="bottom" constant="5" id="Mam-j6-jqa"/>
+                            <constraint firstItem="L0y-Yg-Evs" firstAttribute="top" secondItem="7iv-Ja-lHU" secondAttribute="top" constant="100" id="Nhh-VH-WiJ"/>
+                            <constraint firstItem="okS-We-sNT" firstAttribute="top" secondItem="7iv-Ja-lHU" secondAttribute="top" constant="70" id="Spp-ZW-8Jx"/>
+                            <constraint firstItem="0Uy-pB-uUr" firstAttribute="leading" secondItem="7iv-Ja-lHU" secondAttribute="leading" constant="15" id="cC7-xt-rHV"/>
+                            <constraint firstItem="L0y-Yg-Evs" firstAttribute="leading" secondItem="7iv-Ja-lHU" secondAttribute="leading" id="oAK-hg-J59"/>
+                            <constraint firstItem="7iv-Ja-lHU" firstAttribute="bottom" secondItem="L0y-Yg-Evs" secondAttribute="bottom" id="tXG-N6-k7C"/>
+                            <constraint firstItem="7iv-Ja-lHU" firstAttribute="trailing" secondItem="okS-We-sNT" secondAttribute="trailing" constant="15" id="ui1-um-e4H"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="오늘의 계획" image="timer" catalog="system" id="86I-U0-rxU"/>
+                    <connections>
+                        <outlet property="Date" destination="okS-We-sNT" id="E8i-UT-aJD"/>
+                        <outlet property="tableView" destination="L0y-Yg-Evs" id="Dpw-nI-SCo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Kc-7w-uuk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,6 +129,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofB-uZ-lWd">
                                                 <rect key="frame" x="280" y="0.0" width="94" height="30"/>
                                                 <state key="normal" image="plus" catalog="system"/>
+                                                <connections>
+                                                    <action selector="addBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Am-do-Q9M"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

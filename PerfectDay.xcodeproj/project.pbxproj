@@ -15,6 +15,12 @@
 		D49E1AE1281FD0D3004EE08F /* PerfectDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D49E1ADF281FD0D3004EE08F /* PerfectDay.xcdatamodeld */; };
 		D49E1AE3281FD0D5004EE08F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D49E1AE2281FD0D5004EE08F /* Assets.xcassets */; };
 		D49E1AE6281FD0D5004EE08F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49E1AE4281FD0D5004EE08F /* LaunchScreen.storyboard */; };
+		D4A6F6B52836705F00B1DB04 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A6F6B42836705F00B1DB04 /* AddViewController.swift */; };
+		D4A6F6B82836723200B1DB04 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A6F6B72836723200B1DB04 /* EditViewController.swift */; };
+		D4A6F6BB2836732400B1DB04 /* AddView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A6F6BA2836732400B1DB04 /* AddView.storyboard */; };
+		D4A6F6C22836734A00B1DB04 /* EditView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A6F6C12836734A00B1DB04 /* EditView.storyboard */; };
+		D4C4AA8B283611BE00876378 /* TodayPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C4AA8A283611BE00876378 /* TodayPlanViewController.swift */; };
+		D4C4AA8F283611FA00876378 /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C4AA8E283611FA00876378 /* myTableViewCell.swift */; };
 		D4E553DC2834FE7F002FDD00 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E553DB2834FE7F002FDD00 /* CalendarViewController.swift */; };
 		D4E553E4283501C4002FDD00 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E553E3283501C4002FDD00 /* CalendarTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +38,12 @@
 		D49E1AE2281FD0D5004EE08F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D49E1AE5281FD0D5004EE08F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D49E1AE7281FD0D5004EE08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4A6F6B42836705F00B1DB04 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		D4A6F6B72836723200B1DB04 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		D4A6F6BA2836732400B1DB04 /* AddView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddView.storyboard; sourceTree = "<group>"; };
+		D4A6F6C12836734A00B1DB04 /* EditView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditView.storyboard; sourceTree = "<group>"; };
+		D4C4AA8A283611BE00876378 /* TodayPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPlanViewController.swift; sourceTree = "<group>"; };
+		D4C4AA8E283611FA00876378 /* myTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTableViewCell.swift; sourceTree = "<group>"; };
 		D4E553DB2834FE7F002FDD00 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		D4E553E3283501C4002FDD00 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +100,7 @@
 			children = (
 				D4E553DF2834FE92002FDD00 /* StoryBoard */,
 				D4E553DE2834FE84002FDD00 /* ViewController */,
+				D4C4AA892836117700876378 /* TodayPlan */,
 				D49E1AD6281FD0D3004EE08F /* AppDelegate.swift */,
 				D49E1AD8281FD0D3004EE08F /* SceneDelegate.swift */,
 				D49E1ADA281FD0D3004EE08F /* ViewController.swift */,
@@ -100,11 +113,23 @@
 			path = PerfectDay;
 			sourceTree = "<group>";
 		};
+		D4C4AA892836117700876378 /* TodayPlan */ = {
+			isa = PBXGroup;
+			children = (
+				D4C4AA8A283611BE00876378 /* TodayPlanViewController.swift */,
+				D4C4AA8E283611FA00876378 /* myTableViewCell.swift */,
+			);
+			name = TodayPlan;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		D4E553DE2834FE84002FDD00 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				D4E553DB2834FE7F002FDD00 /* CalendarViewController.swift */,
 				D4E553E3283501C4002FDD00 /* CalendarTableViewCell.swift */,
+				D4A6F6B42836705F00B1DB04 /* AddViewController.swift */,
+				D4A6F6B72836723200B1DB04 /* EditViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -112,6 +137,8 @@
 		D4E553DF2834FE92002FDD00 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				D4A6F6BA2836732400B1DB04 /* AddView.storyboard */,
+				D4A6F6C12836734A00B1DB04 /* EditView.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -176,6 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D49E1AE6281FD0D5004EE08F /* LaunchScreen.storyboard in Resources */,
+				D4A6F6BB2836732400B1DB04 /* AddView.storyboard in Resources */,
+				D4A6F6C22836734A00B1DB04 /* EditView.storyboard in Resources */,
 				D49E1AE3281FD0D5004EE08F /* Assets.xcassets in Resources */,
 				D49E1ADE281FD0D3004EE08F /* Main.storyboard in Resources */,
 			);
@@ -230,6 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A6F6B82836723200B1DB04 /* EditViewController.swift in Sources */,
+				D4C4AA8B283611BE00876378 /* TodayPlanViewController.swift in Sources */,
+				D4C4AA8F283611FA00876378 /* myTableViewCell.swift in Sources */,
+				D4A6F6B52836705F00B1DB04 /* AddViewController.swift in Sources */,
 				D4E553DC2834FE7F002FDD00 /* CalendarViewController.swift in Sources */,
 				D49E1ADB281FD0D3004EE08F /* ViewController.swift in Sources */,
 				D49E1AD7281FD0D3004EE08F /* AppDelegate.swift in Sources */,
